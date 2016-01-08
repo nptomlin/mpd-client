@@ -1,0 +1,15 @@
+{
+  "name": "mpd_client",
+  "version": "1.0.0",
+  "description": "client to connect to mpd music player daemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4"
+  }
+}
