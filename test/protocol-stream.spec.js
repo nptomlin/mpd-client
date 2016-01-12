@@ -9,9 +9,9 @@ var ProtocolStream = require('../lib/protocol-stream');
 describe('protocol-stream', function () {
 
 
-  describe('when data is recieved', function () {
+  describe('when data is received', function () {
 
-    describe('that is multiple responses', function () {
+    describe('that contains multiple responses', function () {
       
       var protocolStream, rawStream;
 
