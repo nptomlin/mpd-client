@@ -29,7 +29,7 @@ describe('protocol-stream', function () {
             done();
           }
         });  
-        rawStream.push('{"x":1}\n\nfoo\n\n');
+        rawStream.push('{"x":1}\nOK\nfoo\nOK\n');
         rawStream.push(null);
       });
 
@@ -43,7 +43,7 @@ describe('protocol-stream', function () {
           }
             timers.setTimeout(function() { done(); }, 50);
         });  
-        rawStream.push('{"x":1}\n\n\n');
+        rawStream.push('{"x":1}\nOK\n\n');
         rawStream.push(null);
       });
 
@@ -65,16 +65,16 @@ describe('protocol-stream', function () {
           expect(chunk).to.be.ok();
           done();
         });  
-        rawStream.push('{"x":1}\n\n');
+        rawStream.push('{"x":1}\nOK\n');
         rawStream.push(null);
       });
 
       it('should split lines', function (done) {
         protocolStream.on('data', function(chunk) {
-          expect(chunk.length).to.be(2);
+          expect(chunk.length).to.be(3);
           done();
         });  
-        rawStream.push('foo\nbar\n\n');
+        rawStream.push('foo\nbar\nOK\n');
         rawStream.push(null);
       });
 
